@@ -1,0 +1,33 @@
+/* Карточки фильмов */
+.movie-card {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+/* Контейнер для горизонтального расположения (постер + информация) */
+.movie-card-content {
+    -fx-spacing: 15px;
+    -fx-alignment: top-center;
+}
+/* Название фильма */
+.movie-card-title {
+    -fx-text-fill: -fx-color-text-dark;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+}
+/* Мета-информация */
+.movie-card-meta > .label {
+    -fx-text-fill: -fx-color-text-dark;
+    -fx-spacing: 5px;
+    -fx-font-size: 10px;
+}
+/* Описание фильма */
+.movie-card-description {
+    -fx-text-fill: -fx-color-text-dark;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+    -fx-padding: 5px 0 0 0;
+    -fx-wrap-text: true;
+}

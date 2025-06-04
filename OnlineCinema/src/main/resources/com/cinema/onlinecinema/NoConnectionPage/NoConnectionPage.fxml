@@ -1,0 +1,16 @@
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <center>
+                <Label text="Нет соединения. Повторите попытку позже."
+                       wrapText="true"
+                       style="-fx-font-size: 18px; -fx-text-fill: gray; -fx-text-alignment: center;"/>
+    </center>
+</BorderPane>

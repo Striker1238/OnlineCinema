@@ -1,0 +1,72 @@
+/* ===== COLOR VARIABLES ===== */
+.root {
+    /* Основные цвета */
+    -fx-color-primary: #333333;
+    -fx-color-secondary: #4A4A4A;
+    -fx-color-accent: #3498db;
+    -fx-color-accent-hover: #2980b9;
+
+    /* Текст */
+    -fx-color-text-primary: #EEEEEE;
+    -fx-color-text-secondary: #e0e0e0;
+    -fx-color-text-muted: #999999;
+    -fx-color-text-dark: #444444;
+
+    /* Статусы */
+    -fx-color-online: #2ecc71;
+    -fx-color-offline: #e74c3c;
+
+    /* Кнопки */
+    -fx-color-button-primary: #3498db;
+    -fx-color-button-success: #4caf50;
+    -fx-color-button-info: #2196f3;
+    -fx-color-button-warning: #ffcc00;
+    -fx-color-button-danger: #ff5722;
+
+    /* Дополнительные */
+    -fx-color-border: #555555;
+    -fx-color-shadow: rgba(0,0,0,0.2);
+    -fx-color-card-bg: #f0f0f0;
+}
+/* ===== ОБЩИЕ СТИЛИ ===== */
+.root {
+    -fx-background-color: #333333;
+}
+
+/* ===== ПАНЕЛИ СКРОЛА ===== */
+/* Используем в setting, profile, index, movie*/
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+
+/* ===== FOOTER ===== */
+.bottom-bar {
+    -fx-background-color: #4A4A4A;
+    -fx-padding: 10px;
+}
+.bottom-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+.bottom-button:hover {
+    -fx-background-color: #333333;
+}
+
+
+/* ===== HEADER ===== */
+.top-bar {
+    -fx-background-color: #333333;
+    -fx-padding: 10px;
+}
+.top-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+.top-button:hover {
+    -fx-background-color: #262626;
+}

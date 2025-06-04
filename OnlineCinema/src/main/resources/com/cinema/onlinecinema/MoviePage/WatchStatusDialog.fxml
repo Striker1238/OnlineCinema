@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cinema.onlinecinema.Controller.WatchStatusDialogController"
+            prefWidth="300" prefHeight="200">
+
+    <VBox spacing="10" alignment="CENTER">
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+
+        <Label text="Выберите статус просмотра:" style="-fx-font-size: 14px;" />
+
+        <RadioButton text="Не смотрю" fx:id="notWatchingRadio"/>
+        <RadioButton text="Буду смотреть" fx:id="planningRadio"/>
+        <RadioButton text="Смотрю" fx:id="watchingRadio"/>
+        <RadioButton text="Брошено" fx:id="droppedRadio"/>
+        <RadioButton text="Просмотрено" fx:id="completedRadio"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Применить" onAction="#applyStatus"/>
+            <Button text="Отмена" onAction="#cancel"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

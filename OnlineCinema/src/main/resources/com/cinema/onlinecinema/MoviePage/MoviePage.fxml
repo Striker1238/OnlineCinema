@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cinema.onlinecinema.Controller.MoviePageController"
+            prefHeight="400.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value = "@MovieStyle.css"/>
+        <URL value ="@../Style/style.css"/>
+    </stylesheets>
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <FlowPane alignment="TOP_CENTER" vgap="20.0" hgap="20.0" prefWidth="800.0" styleClass="scroll-pane">
+                <padding>
+                    <Insets top="20.0" bottom="10.0" left="10.0" right="20.0"/>
+                </padding>
+
+                <!-- Постер -->
+                <ImageView fx:id="posterImageView" fitWidth="200" fitHeight="300" styleClass="poster-section" />
+
+                <!-- Название, рейтинг, статус -->
+                <VBox spacing="5" alignment="CENTER" styleClass="section">
+                    <Label fx:id="titleLabel" text="Ван-Пис" styleClass="title"/>
+                    <Label fx:id="ratingAgeLabel" text="16+" styleClass="rating-age"/>
+
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button fx:id="statusButton" text="Не смотрю" styleClass="status-button"/>
+                    </HBox>
+
+
+
+                    <VBox spacing="2" alignment="CENTER_LEFT" styleClass="details">
+                        <Label fx:id="mediaDescription" wrapText="true" text="Полное описание фильма"/>
+                        <Label fx:id="countryAndDate" text="Старан Name, date"/>
+                        <Label fx:id="episodesLabel" text="Серий из ? эп., по ~? мин."/>
+                        <Label fx:id="releaseSeries" text="Сериал, выходит каждое воскресенье"/>
+                        <Label fx:id="studioLabel" text="Студия: Name"/>
+                        <Label fx:id="authorLabel" text="Автор: Name"/>
+                    </VBox>
+                    <HBox>
+                        <Button text="Подробнее..." styleClass="more-button"/>
+                        <Button text="Воспроизвести" styleClass="play-button"/>
+                    </HBox>
+
+                </VBox>
+
+                <!-- Видео -->
+                <VBox spacing="5" styleClass="section">
+                    <Label text="Видео" styleClass="section-title"/>
+                    <HBox spacing="10">
+                        <Button text="Трейлеры" styleClass="tab-button"/>
+                        <Button text="Опенинги" styleClass="tab-button"/>
+                    </HBox>
+                </VBox>
+
+                <!-- Рейтинг -->
+                <VBox spacing="5" styleClass="section">
+                    <Label text="Рейтинг" styleClass="section-title"/>
+                    <Label fx:id="scoreLabel" text="4.8" styleClass="score"/>
+                    <Label fx:id="votesLavel" text="76 734 голоса" styleClass="votes-text"/>
+                </VBox>
+
+                <!-- В списках у людей -->
+                <VBox spacing="5" styleClass="section">
+                    <Label text="В списках у людей" styleClass="section-title"/>
+                    <Pane prefHeight="150"/> <!-- Здесь можно будет вставить диаграмму -->
+                </VBox>
+
+                <!-- Кадры -->
+                <VBox spacing="5" styleClass="section">
+                    <Label text="Кадры" styleClass="section-title"/>
+                    <Pane prefHeight="100"/> <!-- Место под кадры -->
+                </VBox>
+
+                <!-- Связанные релизы -->
+                <VBox spacing="5" styleClass="section">
+                    <Label text="Связанные релизы" styleClass="section-title"/>
+                    <Pane prefHeight="100"/> <!-- Место под связанные релизы -->
+                </VBox>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

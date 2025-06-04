@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cinema.onlinecinema.Controller.BookmarksPageController">
+    <stylesheets>
+        <URL value ="@../Style/movieCardStyle.css"/>
+        <URL value="@../Style/style.css"/>
+        <URL value="@BookmarksStyle.css"/>
+    </stylesheets>
+    <!-- Верхняя панель фильтров -->
+    <top>
+        <HBox alignment="CENTER" spacing="10" styleClass="bookmarks-top-bar">
+            <padding>
+                <Insets top="10.0" bottom="10.0" left="5.0" right="5.0"/>
+            </padding>
+            <Button text="Смотрю" fx:id="watchingToggle" onAction="#loadWatching" styleClass="bookmarks-top-button"/>
+            <Button text="Буду смотреть" fx:id="plannedToggle" onAction="#loadPlanToWatch" styleClass="bookmarks-top-button"/>
+            <Button text="Просмотренно" fx:id="completedToggle" onAction="#loadCompleted" styleClass="bookmarks-top-button"/>
+            <Button text="Брошено" fx:id="droppedToggle" onAction="#loadDropped" styleClass="bookmarks-top-button"/>
+        </HBox>
+    </top>
+
+    <!-- Список фильмов -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="content-scroll">
+            <VBox>
+                <FlowPane fx:id="cardContainer" hgap="20" vgap="20" alignment="TOP_LEFT">
+                    <padding>
+                        <Insets top="10.0" bottom="10.0" left="10.0" right="10.0"/>
+                    </padding>
+                    <!-- Здесь динамически добавляются карточки фильмов -->
+                </FlowPane>
+                <Label fx:id="emptyLabel" text="Нет фильмов в этом разделе" visible="false"
+                       style="-fx-text-fill: gray; -fx-font-size: 16px;"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

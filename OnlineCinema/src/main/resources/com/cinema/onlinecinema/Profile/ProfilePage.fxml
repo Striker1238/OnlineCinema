@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@ProfileStyle.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cinema.onlinecinema.Controller.ProfilePageController">
+
+    <top>
+        <HBox alignment="TOP_RIGHT">
+            <padding>
+                <Insets top="10" right="10"/>
+            </padding>
+            <Button fx:id="logoutButton" text="🚪" styleClass="social-button"/>
+        </HBox>
+    </top>
+
+    <!-- Основной контент -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <FlowPane fx:id="profileBlockContainer" alignment="TOP_CENTER"   hgap="20.0" vgap="20.0">
+                <!-- Аватар + Ник + Описание + Статус -->
+                <VBox fx:id="profileHeader" styleClass="profile-header">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+
+                    <ImageView fx:id="avatarImageView" fitHeight="100" fitWidth="100" styleClass="profile-avatar" />
+                    <Label fx:id="usernameLabel" styleClass="profile-username" text="Ник пользователя" />
+                    <Label fx:id="bioLabel" styleClass="profile-bio" text="Описание пользователя" />
+                    <Label fx:id="statusLabel" styleClass="profile-status online" text="Онлайн" />
+                    <!-- Блок соц. сетей -->
+                    <VBox styleClass="stats-section">
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="253.0" styleClass="stats-title" text="Социальные сети" />
+                        <HBox fx:id="socialButtonsBox" styleClass="social-buttons">
+                            <Button styleClass="social-button" text="+" />
+                        </HBox>
+                    </VBox>
+                </VBox>
+
+                <!-- Блок статистики -->
+                <VBox styleClass="stats-section">
+                    <Label styleClass="stats-title" text="Статистика" />
+                    <GridPane styleClass="stats-grid">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <Label text="Друзья:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label fx:id="friendsCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Комментарии:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label fx:id="commentsCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    </GridPane>
+                </VBox>
+
+                <!-- Блок общей статистики просмотра -->
+                <VBox styleClass="stats-section">
+                    <Label styleClass="stats-title" text="Статистика просмотра" />
+                    <GridPane styleClass="stats-grid">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                        <Label text="Просмотрено:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label fx:id="watchedCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="В планах:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Label fx:id="plannedCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Брошено:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <Label fx:id="droppedCountLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Среднее время просмотра:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <Label fx:id="averageWatchTimeLabel" text="0 ч" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    </GridPane>
+                </VBox>
+
+                <!-- Блок последних оценок -->
+                <VBox styleClass="stats-section">
+                    <Label styleClass="stats-title" text="Последние оценки" />
+                    <Label fx:id="latestRatingsPlaceholder" styleClass="placeholder-text" text="Нет оценок" />
+                </VBox>
+
+                <!-- Блок истории просмотров -->
+                <VBox styleClass="stats-section">
+                    <Label styleClass="stats-title" text="Просмотрено недавно" />
+                    <Label fx:id="recentWatchedPlaceholder" styleClass="placeholder-text" text="История пуста" />
+                </VBox>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

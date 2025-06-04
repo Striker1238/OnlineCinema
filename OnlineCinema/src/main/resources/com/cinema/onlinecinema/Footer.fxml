@@ -1,0 +1,19 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cinema.onlinecinema.Controller.FooterController"
+            stylesheets="@Style/style.css">
+    <bottom>
+        <HBox spacing="20.0" styleClass="bottom-bar" alignment="center">
+            <padding>
+                <Insets top="10" bottom="10" left="10" right="10"/>
+            </padding>
+            <Button fx:id="homeButton" text="Главная" styleClass="bottom-button" onAction="#openMain"/>
+            <Button fx:id="bookmarksButton" text="Закладки" styleClass="bottom-button" onAction="#openBookmarks"/>
+            <Button fx:id="profileButton" text="Профиль" styleClass="bottom-button" onAction="#openProfile"/>
+        </HBox>
+    </bottom>
+</BorderPane>

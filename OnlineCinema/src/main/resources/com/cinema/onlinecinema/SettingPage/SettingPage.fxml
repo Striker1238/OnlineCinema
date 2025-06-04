@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cinema.onlinecinema.Controller.SettingPageController">
+    <stylesheets>
+        <URL value ="@SettingStyle.css"/>
+        <URL value ="@../Style/style.css"/>
+    </stylesheets>
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <VBox spacing="20" styleClass="settings-content" alignment="TOP_CENTER" >
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+                <!-- Заголовок "Настройки" -->
+                <Label text="Настройки" styleClass="settings-title" />
+
+                <!-- Раздел "Аккаунт" -->
+                <VBox spacing="10" styleClass="settings-section">
+                    <Label text="Аккаунт" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <VBox spacing="5">
+                        <!-- Настройки аккаунта здесь -->
+                        <Label text="Изменить имя пользователя" />
+                        <Label text="Сменить пароль" />
+                    </VBox>
+                </VBox>
+
+                <!-- Раздел "Уведомления" -->
+                <VBox spacing="10" styleClass="settings-section">
+                    <Label text="Уведомления" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <VBox spacing="5">
+                        <!-- Настройки уведомлений здесь -->
+                        <Label text="Получать уведомления о новостях" />
+                        <Label text="Получать уведомления о сообщениях" />
+                    </VBox>
+                </VBox>
+
+                <!-- Раздел "Оформление" -->
+                <VBox spacing="10" styleClass="settings-section">
+                    <Label text="Оформление" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <VBox spacing="5">
+                        <!-- Настройки оформления здесь -->
+                        <Label text="Тема: Светлая/Темная" />
+                        <Label text="Размер шрифта" />
+                    </VBox>
+                </VBox>
+
+                <!-- Раздел "Приватность" -->
+                <VBox spacing="10" styleClass="settings-section">
+                    <Label text="Приватность" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                    <VBox spacing="5">
+                        <!-- Настройки приватности здесь -->
+                        <Label text="Кто может видеть мой профиль" />
+                        <Label text="Кто может отправлять сообщения" />
+                    </VBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

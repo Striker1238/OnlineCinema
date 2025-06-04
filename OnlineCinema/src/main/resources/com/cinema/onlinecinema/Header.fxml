@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@Style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cinema.onlinecinema.Controller.HeaderController">
+    <top>
+        <HBox spacing="10.0" styleClass="top-bar">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <TextField fx:id="searchField" prefWidth="150.0" promptText="Поиск..." HBox.hgrow="ALWAYS" />
+            <Button fx:id="notificationsButton" styleClass="top-button" text="🔔" />
+            <Button fx:id="settingsButton" onAction="#openSetting" styleClass="top-button" text="⚙" />
+        </HBox>
+    </top>
+</BorderPane>

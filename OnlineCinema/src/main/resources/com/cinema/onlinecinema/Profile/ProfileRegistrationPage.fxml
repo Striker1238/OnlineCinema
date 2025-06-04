@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.cinema.onlinecinema.Controller.ProfileRegistrationPageController">
+    <stylesheets>
+        <URL value = "@ProfileStyle.css"/>
+        <URL value ="@../Style/style.css"/>
+    </stylesheets>
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label styleClass="login-title" text="Регистрация" BorderPane.alignment="CENTER"/>
+            <TextField fx:id="firstNameTextField" promptText="Имя" styleClass="login-field" />
+            <TextField fx:id="lastNameTextField" promptText="Фамилия" styleClass="login-field" />
+            <TextField fx:id="phoneNumberTextField" promptText="Телефон" styleClass="login-field" />
+            <TextField fx:id="emailTextField" promptText="Почта" styleClass="login-field" />
+            <TextField fx:id="loginTextField" promptText="Логин" styleClass="login-field" />
+            <PasswordField fx:id="passwordField" promptText="Пароль" styleClass="login-field" />
+            <DatePicker fx:id="dateBirthDatePicker" promptText="Дата рождения" styleClass="login-field" />
+            <Button fx:id="createAccountButton" onAction="#startRegistration" styleClass="social-button" text="Зарегистрироваться" />
+
+            <Label fx:id="isHaveAccountLabel" text="Уже есть аккаунт? Войти" styleClass="login-have-account">
+                <tooltip>
+                    <Tooltip text="Вернуться к форме входа" />
+                </tooltip>
+            </Label>
+        </VBox>
+    </center>
+</BorderPane>

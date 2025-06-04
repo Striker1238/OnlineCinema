@@ -1,0 +1,33 @@
+/* ===== ПАНЕЛИ СКРОЛА ===== */
+.scroll-pane {
+    -fx-background: #333333;
+    -fx-background-color: #333333;
+    -fx-alignment: TOP_CENTER;
+}
+.scroll-pane .viewport {
+    -fx-background-color: #333333;
+}
+
+
+/* ===== ОСНОВНЫЕ БЛОКИ ===== */
+.settings-content {
+    -fx-background-color: #333333;
+}
+.settings-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EEEEEE;
+    -fx-padding: 20px 0 20px 0;
+}
+.settings-section {
+    -fx-padding: 10 0 10 0;
+    -fx-background-color: transparent;
+    -fx-border-color: #555555;
+    -fx-border-width: 0 0 1 0; /* Только нижняя граница */
+}
+
+
+
+Label {
+    -fx-text-fill: #EEEEEE;
+}

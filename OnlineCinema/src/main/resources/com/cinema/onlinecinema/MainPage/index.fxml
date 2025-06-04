@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cinema.onlinecinema.Controller.IndexPageController">
+    <stylesheets>
+        <URL value ="@IndexStyle.css"/>
+        <URL value ="@../Style/movieCardStyle.css"/>
+        <URL value ="@../Style/style.css"/>
+    </stylesheets>
+    <center>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" styleClass="scroll-pane">
+            <FlowPane fx:id="cardContainer" vgap="20.0" hgap="20.0" prefWidth="800.0">
+                <padding>
+                    <Insets top="15.0" bottom="15.0" left="15.0" right="15.0"/>
+                </padding>
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

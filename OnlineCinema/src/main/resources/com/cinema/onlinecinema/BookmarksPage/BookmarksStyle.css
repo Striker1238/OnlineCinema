@@ -1,0 +1,9 @@
+.bookmarks-top-bar {
+    -fx-background-color: #333333; /* Темно-серый */
+}
+.bookmarks-top-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
